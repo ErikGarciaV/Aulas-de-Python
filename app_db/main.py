@@ -31,13 +31,11 @@ while True:
             nova_idade = int(input("escolha a nova idade do usuário: "))
             crud.atualizar_usuario(id_usuario, novo_nome, nova_idade)
             print("usuário atualizado com sucesso")
-            print(crud.listar_usuarios())
 
         case "Deletar usuário":
             id_usuario = int(input("escolha o id do usuário: "))
             crud.deletar_usuario(id_usuario)
             print("usuario deletado com sucesso")
-            print(crud.listar_usuarios())
 
         case _:
             break
