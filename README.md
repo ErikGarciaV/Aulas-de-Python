@@ -24,3 +24,15 @@ Estrutura de Projetos Python e Organização com Pastas e Módulos
 
 ## aula 8
 Git e Controle de Versão na Prática (com GitHub)
+
+## aula 9
+SQLite e CRUD básico
+
+## aula 10
+Modelagem de dados e SQL avançado
+
+## aula 11
+ORM com SQLAlchemy
+
+## aula 12
+Update, delete e filtros no ORM
