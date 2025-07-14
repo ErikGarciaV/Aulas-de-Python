@@ -6,4 +6,5 @@ engine = create_engine("sqlite:///usuarios.db", echo=False)
 Base = declarative_base()
 
 Session = sessionmaker(bind=engine)
+session = Session()
 

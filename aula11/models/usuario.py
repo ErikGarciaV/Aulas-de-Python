@@ -8,8 +8,5 @@ class Usuario(Base):
     id = Column(Integer, primary_key=True)
     nome = Column(String, nullable=False)
     idade = Column(Integer)
-
-    def __repr__(self):
-        return f"<Usuario(nome='{self.nome})' idade={self.idade})>"
     
     pedidos = relationship("Pedido", back_populates="usuario", cascade="all, delete-orphan")
