@@ -1,5 +1,7 @@
 from db import Session
 from models.usuario import Usuario
+from models.pedido import Pedido
+from sqlalchemy.orm import joinedload
 
 def criar_usuario(nome, idade):
     session = Session()
@@ -47,3 +49,17 @@ def buscar_por_nome(parte_do_nome):
     session.close()
     return resultado
    
+def criar_pedido(descricao, usuario_id):
+    session = Session()
+    pedido = Pedido(descricao=descricao, usuario_id=usuario_id)
+    session.add(pedido)
+    session.commit()
+    session.close()
+
+def listar_pedidos():
+    session = Session()
+    pedidos = session.query(Pedido).all()
+    for p in pedidos:
+        print(f"Pedido #{p.id} - {p.descricao} (Usuário: {p.usuario.nome})")
+    session.close()
+
